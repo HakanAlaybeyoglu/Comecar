@@ -11,7 +11,7 @@ namespace Comecar
 {
 
 
-    public partial class HakanSa
+    public partial class saler_profile
     {
 
         /// <summary>

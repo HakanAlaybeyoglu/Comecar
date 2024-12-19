@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="saler_profile.aspx.cs" Inherits="Comecar.HakanSa" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="saler_profile.aspx.cs" Inherits="Comecar.saler_profile" %>
 
 <!DOCTYPE html>
 
