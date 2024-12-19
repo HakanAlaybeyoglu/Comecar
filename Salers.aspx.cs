@@ -19,7 +19,7 @@ namespace Comecar
             {
                 // Veritabanına bağlanarak salers verilerini çekme
 
-                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
 
                 string query = @"
                     SELECT * FROM SALERS";

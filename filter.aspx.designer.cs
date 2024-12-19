@@ -15,12 +15,12 @@ namespace Comecar
     {
 
         /// <summary>
-        /// form1 denetimi.
+        /// vehıcleCheckBoxList denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.CheckBoxList vehıcleCheckBoxList;
     }
 }

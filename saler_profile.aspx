@@ -68,10 +68,7 @@
             <div class="left-menü">
                     <!-- Satıcı Bilgileri Placeholder -->
                     <asp:PlaceHolder ID="leftMenu" runat="server"></asp:PlaceHolder>
-                    
-                    <h1>Filter</h1>
-                    <p>It is easier to find your dream vehicle with the filtering section!</p>
-                    <a href="filter.aspx"><button type="button" class="btn btn-outline-secondary">Filter</button></a>
+                 
             </div>
     </aside>
 
