@@ -13,14 +13,5 @@ namespace Comecar
 
     public partial class filter
     {
-
-        /// <summary>
-        /// vehıcleCheckBoxList denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik olarak oluşturulan alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList vehıcleCheckBoxList;
     }
 }

@@ -62,62 +62,59 @@
             <h1 style="text-align:center; border-bottom: 1px solid grey; padding: 15px;">Filter</h1>
             <div class="typechekbox col-6">
                 <h5> Brands</h5>
-                  <asp:CheckBoxList ID="brandCheckBoxList" runat="server">
-             <asp:ListItem Text="Mercedes" Value="Mercedes"></asp:ListItem>
-              <asp:ListItem Text="Bmv" Value="Bmv"></asp:ListItem>
-                <asp:ListItem Text="Audi" Value="Audi"></asp:ListItem>
-               
-                 <asp:ListItem Text="Volkswagen" Value="Volkswagen"></asp:ListItem>
-                <asp:ListItem Text="Kia" Value="Kia"></asp:ListItem>
-                 <asp:ListItem Text="Seat" Value="Seat"></asp:ListItem>
-                 <asp:ListItem Text="Skoda" Value="Skoda"></asp:ListItem>
-                 <asp:ListItem Text="Renault" Value="Renault"></asp:ListItem>
-              <asp:ListItem Text="Opel" Value="Opel"></asp:ListItem>
-                 <asp:ListItem Text=">Volvo" Value="Volvo"></asp:ListItem>
-                <asp:ListItem Text="Vespa" Value="Vespa"></asp:ListItem>
-               <asp:ListItem Text="Honda" Value="Honda"></asp:ListItem>
-                <asp:ListItem Text="Kawasakı" Value="Kawasakı"></asp:ListItem>
-               <asp:ListItem Text="Kuba" Value="Kuba"></asp:ListItem>
+                  <asp:CheckBoxList ID="brandCheckBoxList" runat="server" >
+             <asp:ListItem Text="Mercedes" Value="1"></asp:ListItem>
+              <asp:ListItem Text="Bmw" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Audi" Value="3"></asp:ListItem>
+                 <asp:ListItem Text="Volkswagen" Value="4"></asp:ListItem>
+                <asp:ListItem Text="Kia" Value="5"></asp:ListItem>
+                 <asp:ListItem Text="Seat" Value="6"></asp:ListItem>
+                 <asp:ListItem Text="Skoda" Value="7"></asp:ListItem>
+                 <asp:ListItem Text="Renault" Value="8"></asp:ListItem>
+              <asp:ListItem Text="Opel" Value="9"></asp:ListItem>
+                 <asp:ListItem Text="Volvo" Value="10"></asp:ListItem>
+                <asp:ListItem Text="Vespa" Value="11"></asp:ListItem>
+               <asp:ListItem Text="Honda" Value="12"></asp:ListItem>
+                <asp:ListItem Text="Kawasakı" Value="13"></asp:ListItem>
+               <asp:ListItem Text="Kuba" Value="14"></asp:ListItem>
                        </asp:CheckBoxList>
             </div>
             <div class="typechekbox col-6">
-                <h5> Color</h5>
+                <h5> Colors</h5>
                 <asp:CheckBoxList ID="colorCheckBoxList" runat="server">
-                <asp:ListItem Text="Black" Value="Black"></asp:ListItem>
-                <asp:ListItem Text="White" Value="White"></asp:ListItem>
-                <asp:ListItem Text="Blue" Value="Blue"></asp:ListItem>
-                <asp:ListItem Text="Green" Value="Green"></asp:ListItem>
-             <asp:ListItem Text="Grey" Value="Grey"></asp:ListItem>
-                <asp:ListItem Text="Red" Value="Red"></asp:ListItem>
+                <asp:ListItem Text="Black" Value="1"></asp:ListItem>
+                <asp:ListItem Text="White" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Gray" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Blue" Value="4"></asp:ListItem>
+             <asp:ListItem Text="Red" Value="5"></asp:ListItem>
+                <asp:ListItem Text="Green" Value="6"></asp:ListItem>
                        </asp:CheckBoxList>
             </div>
             <div class="typechekbox col-6">
                 <h5> Fuel Type</h5>
                  <asp:CheckBoxList ID="fuelCheckBoxList" runat="server">
-              <asp:ListItem Text="Gasoline" Value="Gasoline"></asp:ListItem>
-                 <asp:ListItem Text="Diesel" Value="Diesel"></asp:ListItem>
-                <asp:ListItem Text="Hybrid" Value="Hybrid"></asp:ListItem>
-                <asp:ListItem Text="Electric" Value="Electric"></asp:ListItem>
+              <asp:ListItem Text="Gasoline" Value="1"></asp:ListItem>
+                 <asp:ListItem Text="Diesel" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Hybrid" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Electric" Value="4"></asp:ListItem>
 
                       </asp:CheckBoxList>
             </div>
             <div class="typechekbox col-6">
                 <h5> Gear Type</h5>
                 <asp:CheckBoxList ID="gearCheckBoxList" runat="server">
-               <asp:ListItem Text="Automatic" Value="Automatic"></asp:ListItem>
-               <asp:ListItem Text="Manual" Value="Manual"></asp:ListItem>
-                    <asp:ListItem Text="Triptronic" Value="Triptronic"></asp:ListItem>
-                
-
+               <asp:ListItem Text="Automatic" Value="1"></asp:ListItem>
+               <asp:ListItem Text="Manual" Value="2"></asp:ListItem>
+                    <asp:ListItem Text="Triptronic" Value="3"></asp:ListItem>
                     </asp:CheckBoxList>
 
             </div>
             <div class="typechekbox col-6">
                 <h5> Vehicle Type</h5>
-                 <asp:CheckBoxList ID="vehıcleCheckBoxList" runat="server">
-             <asp:ListItem Text="Car" Value="Car"></asp:ListItem>
-                <asp:ListItem Text="Suv" Value="Suv"></asp:ListItem>
-                 <asp:ListItem Text="Motorcycle" Value="Motorcycle"></asp:ListItem>
+                 <asp:CheckBoxList ID="vehicleCheckBoxList" runat="server">
+             <asp:ListItem Text="Car" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Suv" Value="2"></asp:ListItem>
+                 <asp:ListItem Text="Motorcycle" Value="3"></asp:ListItem>
 
  </asp:CheckBoxList>
 
@@ -125,16 +122,16 @@
             <div class="typechekbox col-6">
                 <h5> Saler</h5>
                 <asp:CheckBoxList ID="salersCheckBoxList" runat="server">
-                 <asp:ListItem Text="Yaren Beren Öztürk" Value="Yaren Beren Öztürk"></asp:ListItem>
-                <asp:ListItem Text="Sila Güler Cinar" Value="Sila Güler Cinar"></asp:ListItem>
-                <asp:ListItem Text="Hakan Alaybeyoglu" Value="Hakan Alaybeyoglu"></asp:ListItem>
-                <asp:ListItem Text="Kağan Alaybeyoglu" Value="Kagan Alaybeyoglu"></asp:ListItem>
+                 <asp:ListItem Text="Yaren Öztürk" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Sila Cinar" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Hakan Alaybeyoglu" Value="4"></asp:ListItem>
+                <asp:ListItem Text="Kağan Alaybeyoglu" Value="1"></asp:ListItem>
 
                     </asp:CheckBoxList>
 
             </div>
 
-            <asp:Button type="button" class="btn btn-secondary col-12" style=" --bs-btn-padding-y: .45rem; --bs-btn-padding-x: .1rem; --bs-btn-font-size: .75rem; mask-size:100%; " runat="server" onserverclick="Filtrele_Click"  Text="Filter">
+            <asp:Button type="button" class="btn btn-secondary col-12" style=" --bs-btn-padding-y: .45rem; --bs-btn-padding-x: .1rem; --bs-btn-font-size: .75rem; mask-size:100%; " runat="server" OnClick="Filtrele_Click"  Text="Filter">
                    
                
             </asp:Button>

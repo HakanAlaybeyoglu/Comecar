@@ -116,6 +116,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="get_filter.aspx" />
     <Content Include="map.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="get_filter.aspx.cs">
+      <DependentUpon>get_filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="get_filter.aspx.designer.cs">
+      <DependentUpon>get_filter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
