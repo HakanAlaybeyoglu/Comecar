@@ -13,6 +13,7 @@ namespace Comecar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // QueryString'den filtre parametrelerini alıyoruz
             string brand = Request.QueryString["brand"];
             string color = Request.QueryString["color"];
             string fuel = Request.QueryString["fuel"];
@@ -20,14 +21,14 @@ namespace Comecar
             string type = Request.QueryString["type"];
             string saler = Request.QueryString["saler"];
 
-            if (!IsPostBack)
+            if (!IsPostBack) // Sayfa sadece ilk kez yüklendiğinde çalışacak
             {
                 string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    // Sorgu başlangıcı
+                    // Ana SQL sorgusu
                     string sqlQuery = @"
                 SELECT
                     DAILY_PRICE,
@@ -54,43 +55,54 @@ namespace Comecar
                 JOIN
                     SALERS S ON V.SALER_ID = S.S_ID";
 
-                    // WHERE koşullarını dinamik oluştur
+                    // WHERE koşullarını dinamik olarak oluştur
                     List<string> conditions = new List<string>();
                     SqlCommand filterCommand = new SqlCommand();
                     filterCommand.Connection = conn;
 
+                    // Brand kontrolü
                     if (!string.IsNullOrEmpty(brand))
                     {
                         conditions.Add("B.B_ID = @brand");
                         filterCommand.Parameters.AddWithValue("@brand", brand);
                     }
+
+                    // Color kontrolü
                     if (!string.IsNullOrEmpty(color))
                     {
                         conditions.Add("C.C_ID = @color");
                         filterCommand.Parameters.AddWithValue("@color", color);
                     }
+
+                    // Fuel kontrolü
                     if (!string.IsNullOrEmpty(fuel))
                     {
                         conditions.Add("F.FT_ID = @fuel");
                         filterCommand.Parameters.AddWithValue("@fuel", fuel);
                     }
+
+                    // Gear kontrolü
                     if (!string.IsNullOrEmpty(gear))
                     {
                         conditions.Add("G.GT_ID = @gear");
                         filterCommand.Parameters.AddWithValue("@gear", gear);
                     }
+
+                    // Type kontrolü
                     if (!string.IsNullOrEmpty(type))
                     {
                         conditions.Add("T.VT_ID = @type");
                         filterCommand.Parameters.AddWithValue("@type", type);
                     }
+
+                    // Saler kontrolü
                     if (!string.IsNullOrEmpty(saler))
                     {
                         conditions.Add("S.S_ID = @saler");
                         filterCommand.Parameters.AddWithValue("@saler", saler);
                     }
 
-                    // Eğer bir filtre varsa WHERE koşulunu ekle
+                    // WHERE koşullarını sorguya ekle
                     if (conditions.Count > 0)
                     {
                         sqlQuery += " WHERE " + string.Join(" AND ", conditions);
@@ -98,6 +110,7 @@ namespace Comecar
 
                     filterCommand.CommandText = sqlQuery;
 
+                    // Sorguyu çalıştır ve sonuçları al
                     SqlDataReader filterReader = filterCommand.ExecuteReader();
                     while (filterReader.Read())
                     {
@@ -109,23 +122,24 @@ namespace Comecar
                         string colorName = filterReader["COLOUR_NAME"].ToString();
                         string image = filterReader["IMAGE1"].ToString();
 
+                        // HTML kartını oluştur
                         string cardHtml = $@"
                     <div class='card'>
                         <div class='card-body'>
                             <h3 class='card-title'>{brandName} {colorName} ({year})</h3>
                             <p class='card-text'>
-                               <h5> Price: {dailyPrice} </h5> 
+                                <h5> Price: {dailyPrice} </h5> 
                                 Kilometres: {kilometres} <br />
                                 Year: {year} <br />
                             </p>
-                          <div class='image-body'> 
-                                <img src='{image}' alt='{brandName} {colorName} ' class='card-img-top' /> 
-                          </div>
+                            <div class='image-body'> 
+                                <img src='{image}' alt='{brandName} {colorName}' class='card-img-top' /> 
+                            </div>
                             <a href='car_profile.aspx?id={vehicleId}' class='btn btn-secondary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
                         </div>
                     </div>";
 
-                        // HTML kartını placeholder'a eklemek için
+                        // Placeholder'a HTML ekle
                         filterPlaceholder.Controls.Add(new LiteralControl(cardHtml));
                     }
                     filterReader.Close();
@@ -133,5 +147,6 @@ namespace Comecar
             }
         }
     }
+
 
 }
