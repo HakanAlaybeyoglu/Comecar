@@ -23,7 +23,7 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak verileri çekme
-                string connectionString = "DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
@@ -57,12 +57,63 @@ namespace Comecar
                     WHERE 
                        B.B_ID = @brand AND C.C_ID = @color AND F.FT_ID = @fuel AND G.GT_ID = @gear AND T.VT_ID = @type AND S.S_ID = @saler";
                     SqlCommand filterCommand = new SqlCommand(sqlQuery, conn);
-                    filterCommand.Parameters.AddWithValue("@brand", brand);
-                    filterCommand.Parameters.AddWithValue("@color", color);
-                    filterCommand.Parameters.AddWithValue("@fuel", fuel);
-                    filterCommand.Parameters.AddWithValue("@gear", gear);
-                    filterCommand.Parameters.AddWithValue("@type", type);
-                    filterCommand.Parameters.AddWithValue("@saler", saler);
+                    
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@brand", brand);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@brand", DBNull.Value);
+                    }
+
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@color", color);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@color", DBNull.Value);
+                    }
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@fuel", fuel);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@fuel", DBNull.Value);
+                    }
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@gear", gear);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@gear", DBNull.Value);
+                    }
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@type", type);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@type", DBNull.Value);
+                    }
+                    if (!string.IsNullOrEmpty(color))
+                    {
+                        filterCommand.Parameters.AddWithValue("@saler", saler);
+                    }
+                    else
+                    {
+                        // Color değeri boşsa, null olarak ekle
+                        filterCommand.Parameters.AddWithValue("@saler", DBNull.Value);
+                    }
+
 
 
                     SqlDataReader filterReader = filterCommand.ExecuteReader();

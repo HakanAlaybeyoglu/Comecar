@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="get_filter.aspx.cs" Inherits="Comecar.get_filter" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="get_filter.aspx.cs" Inherits="Comecar.get_filter" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
