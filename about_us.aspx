@@ -21,13 +21,6 @@
             </small>
             <small style="font-size:15px">Fast Buy Fast Sell</small>
         </div>
-        <div class="authentication-link">
-            <ul>
-                <li><a href="login.hmtl"> Log In<sub>(for salers)</sub></a></li>
-                <li><a href="register.aspx">Add Vehicle</a></li>
-            </ul>
-        </div>
-
 
     </header>
     <nav>
@@ -37,8 +30,8 @@
         <div class="menü">
             <ul>
                 <li><a href="index.aspx" class="active">Home Page</a></li>
-                <li><a href="about_us.aspx">About Us</a></li>
                 <li><a href="Salers.aspx">Salers</a></li>
+                <li><a href="about_us.aspx">About Us</a></li>
                 <li><a href="contact.aspx">Contact</a></li>
             </ul>
         </div>
@@ -54,14 +47,14 @@
             We welcome everyone to Comecar for safe and fast buying and selling.
         </div>
     </main>
-    <footer>
+    <footer style='position: relative; bottom: -110px;'>
         <section class="row">
             <div class="sosyal-medya">
                 <h5>We on Social Media</h5>
                 <ul>
-                    <li> <a href="ınstagram.html">Instagram</a></li>
-                    <li> <a href="twitter.html">Twitter</a></li>
-                    <li> <a href="linkedin.html">Linkedin</a></li>
+                    <li> <a href="https://www.instagram.com/">Instagram</a></li>
+                    <li> <a href="https://x.com/">Twitter</a></li>
+                    <li> <a href="https://www.linkedin.com/">Linkedin</a></li>
                 </ul>
             </div>
             <div class="iletişim">

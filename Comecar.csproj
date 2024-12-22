@@ -123,7 +123,6 @@
     <Content Include="saler_profile.aspx" />
     <Content Include="index.aspx" />
     <Content Include="logo.png" />
-    <Content Include="register.aspx" />
     <Content Include="Salers.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -235,13 +234,6 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="register.aspx.cs">
-      <DependentUpon>register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="register.aspx.designer.cs">
-      <DependentUpon>register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Salers.aspx.cs">
       <DependentUpon>Salers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
