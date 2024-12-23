@@ -124,17 +124,20 @@ namespace Comecar
 
                         // HTML kartını oluştur
                         string cardHtml = $@"
-                    <div class='card'>
-                        <div class='card-body'>
+                                                    
+                         <div class='card d-flex flex-row align-items-center mb-3' style='border: 1px solid #ddd; padding: 10px;'>
+                        <div class='card-image' style='width: 200px; margin-right: 20px;'>
+                            <img src='{image}' alt='{brandName} {colorName}' class='img-fluid' style='width: 100%; height: auto;' />
+                        </div>
+                        <div class='card-body' style='flex: 1;'>
                             <h3 class='card-title'>{brandName} {colorName} ({year})</h3>
                             <p class='card-text'>
-                                <h5> Price: {dailyPrice} </h5> 
-                                Kilometres: {kilometres} <br />
-                                Year: {year} <br />
+                                <strong>Price:</strong> {dailyPrice} <br />
+                                <strong>Kilometres:</strong> {kilometres} <br />
+                                <strong>Year:</strong> {year}
                             </p>
-                            <div class='image-body'> 
-                                <img src='{image}' alt='{brandName} {colorName}' class='card-img-top' /> 
-                            </div>
+                        </div>
+                        <div class='card-button' style='margin-left: auto;'>
                             <a href='car_profile.aspx?id={vehicleId}' class='btn btn-secondary' tabindex='-1' role='button' aria-disabled='true'>Details</a>
                         </div>
                     </div>";
