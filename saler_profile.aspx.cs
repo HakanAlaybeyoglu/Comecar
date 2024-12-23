@@ -18,7 +18,7 @@ namespace Comecar
             if (!IsPostBack) // Sayfa ilk kez yüklendiğinde çalışacak
             {
                 // Veritabanına bağlanarak verileri çekme
-                string connectionString = "Server=HDESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
