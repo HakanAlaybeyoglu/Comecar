@@ -23,7 +23,7 @@ namespace Comecar
 
             if (!IsPostBack) // Sayfa sadece ilk kez yüklendiğinde çalışacak
             {
-                string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+                string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
