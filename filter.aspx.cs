@@ -12,6 +12,7 @@ namespace Comecar
     public partial class filter : System.Web.UI.Page
     {
         // Veritabanı bağlantı dizesi
+
         string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
         protected CheckBoxList brandCheckBoxList;
         protected CheckBoxList colorCheckBoxList;
@@ -20,9 +21,10 @@ namespace Comecar
         protected CheckBoxList vehicleCheckBoxList;
         protected CheckBoxList salersCheckBoxList;
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           //
+            //
         }
 
         protected void Filtrele_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Comecar
 
             // Marka Filtresi
             StringBuilder brandFilter = new StringBuilder();
-            foreach (ListItem item in brandCheckBoxList.Items)
+            foreach (ListItem item in brandRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -46,7 +48,7 @@ namespace Comecar
 
             // Renk Filtresi
             StringBuilder colorFilter = new StringBuilder();
-            foreach (ListItem item in colorCheckBoxList.Items)
+            foreach (ListItem item in colorRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -60,7 +62,7 @@ namespace Comecar
 
             // Yakıt Filtresi
             StringBuilder fuelFilter = new StringBuilder();
-            foreach (ListItem item in fuelCheckBoxList.Items)
+            foreach (ListItem item in fuelRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -74,7 +76,7 @@ namespace Comecar
 
             // Vites Filtresi
             StringBuilder gearFilter = new StringBuilder();
-            foreach (ListItem item in gearCheckBoxList.Items)
+            foreach (ListItem item in gearRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -88,7 +90,7 @@ namespace Comecar
 
             // Araç Tipi Filtresi
             StringBuilder typeFilter = new StringBuilder();
-            foreach (ListItem item in vehicleCheckBoxList.Items)
+            foreach (ListItem item in vehicleRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -102,7 +104,7 @@ namespace Comecar
 
             // Satıcı Filtresi
             StringBuilder salerFilter = new StringBuilder();
-            foreach (ListItem item in salersCheckBoxList.Items)
+            foreach (ListItem item in salersRadioButtonList.Items)
             {
                 if (item.Selected)
                 {
@@ -125,3 +127,5 @@ namespace Comecar
 
     }
 }
+
+

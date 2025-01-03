@@ -178,10 +178,7 @@ aside {
                     */
 }
 
-.typechekbox {
-    border-bottom: 1px solid grey;
-    padding: 15px;
-}
+
 
 aside left-menü {
     width: 60%;
@@ -354,72 +351,6 @@ footer {
     border: 1px solid red;
 }
 
-form .register {
-    width: 50%;
-    margin: 0 auto;
-    /*ortalar birincisi üstten alttan ikincisi
-                            sağdan soldan eşitler
-                        */
-}
-
-form input {
-    flex: 0 0 auto;
-    width: 100%;
-    border-color: #808080;
-    border-radius: 5px;
-    /*kenarlar yuvarlanır*/
-    padding: 5px;
-    /*input cercevesini genişletir*/
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    /* inputa tıkladıgımızda cevresinde golge border oluşturur bunun kaç saniyede olucagını bildirir
-                            ease in out içerden dısarı olur anlamını verir
-                        */
-    background-color: azure;
-    background-clip: padding-box;
-    /* yazının arkdasına cerceve yapar gereksiz silinebilir*/
-    line-height: 1.5;
-    margin-top: 10px;
-    /* inputla ad, soyad yazısını ayırır*/
-}
-
-form label {
-    letter-spacing: 0.09em;
-    /* harfler arasındaki boslugu açar*/
-}
-
-input:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.05rem;
-    /* inputun içine girdiğimizde* çerçevenin etrafı renklenir*/
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.btn-register {
-    border-radius: 5px;
-    border: 1px solid grey;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    /* harflerin araları aç*/
-    padding: 5px;
-    width: 100%;
-}
-
-    .btn-register:hover {
-        cursor: pointer;
-    }
-
-.radio {
-    padding: 1px;
-    height: 40px;
-}
-
-    .radio p {
-        padding-inline: 2px;
-        margin: 4px;
-    }
 
 
 
