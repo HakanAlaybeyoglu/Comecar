@@ -12,7 +12,7 @@ namespace Comecar
     public partial class filter : System.Web.UI.Page
     {
         // Veritabanı bağlantı dizesi
-        string connectionString = "Server=DESKTOP-LI7EMTS;Database=COMECAR;Integrated Security=True;";
+        string connectionString = "Server=DESKTOP-8D8OQ9R;Database=COMECAR;Integrated Security=True;";
         protected CheckBoxList brandCheckBoxList;
         protected CheckBoxList colorCheckBoxList;
         protected CheckBoxList fuelCheckBoxList;
